@@ -107,7 +107,14 @@ function ChatPage() {
                   title="Ask a workplace question"
                   description="Your conversation stays in this session only."
                 >
-                  <div className="mt-4 flex flex-wrap justify-center gap-2">
+                  <MessagesSquare className="size-8 text-muted-foreground opacity-40" />
+                  <div className="space-y-1">
+                    <h3 className="text-sm font-medium">Ask a workplace question</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Your conversation stays in this session only.
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap justify-center gap-2">
                     {SUGGESTIONS.map((s) => (
                       <button
                         key={s}
@@ -148,9 +155,9 @@ function ChatPage() {
 
           <div className="border-t border-border p-3">
             <PromptInput
-              onSubmit={(_message, event) => {
+              onSubmit={(message, event) => {
                 event.preventDefault();
-                send(input);
+                send(message.text || input);
               }}
             >
               <PromptInputTextarea
@@ -160,7 +167,7 @@ function ChatPage() {
                 placeholder="Ask about meetings, priorities, communication…"
               />
               <PromptInputFooter className="justify-end">
-                <PromptInputSubmit status={status} disabled={!input.trim() && !busy} />
+                <PromptInputSubmit status={status} disabled={busy} />
               </PromptInputFooter>
             </PromptInput>
           </div>

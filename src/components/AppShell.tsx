@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { LayoutDashboard, Mail, BookOpen, MessagesSquare, Menu, X, Bot } from "lucide-react";
+import { LayoutDashboard, Mail, BookOpen, MessagesSquare, Menu, Bot } from "lucide-react";
 import { useState, type ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
@@ -20,7 +20,7 @@ export function ResponsibleAiNote({ className }: { className?: string }) {
   );
 }
 
-function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
+function NavLinks({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   return (
@@ -48,7 +48,7 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
   );
 }
 
-function SidebarInner({ onNavigate }: { onNavigate?: () => void }) {
+function SidebarInner({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   return (
     <div className="flex h-full flex-col gap-6 p-5">
       <Link to="/" onClick={onNavigate} className="flex items-center gap-3">
@@ -105,7 +105,7 @@ export function AppShell({
             aria-label={open ? "Close navigation" : "Open navigation"}
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <Menu className="size-4" /> : <Menu className="size-4" />}
+            <Menu className="size-4" />
           </button>
           <div className="min-w-0">
             <h1 className="truncate text-lg font-semibold md:text-xl">{title}</h1>
@@ -117,5 +117,3 @@ export function AppShell({
     </div>
   );
 }
-
-export { X };

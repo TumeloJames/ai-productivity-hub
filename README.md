@@ -1,86 +1,89 @@
-# AI Productivity Hub
+AI Workplace Productivity Assistant
+A modern, responsive SaaS-style web application designed to help professionals automate common workplace tasks using AI.
+🚀 Overview
+AI Workplace Productivity Assistant provides a simple workspace for generating professional emails, researching topics and interacting with an AI workplace assistant.
+The application focuses on a clean, professional user experience with a light grey and dark colour scheme.
+✨ Features
+📧 Smart Email Generator
+Generate professional workplace emails based on user-provided information.
+•	Formal, Friendly and Persuasive tones
+•	Structured AI prompts
+•	Editable generated emails
+•	Copy generated content
+•	User-specific AI responses
+🔎 AI Research Assistant
+Use AI to quickly understand topics and articles.
+•	Enter a topic, question or article
+•	Generate summaries
+•	Extract key insights
+•	Receive practical recommendations
+•	Edit and copy generated results
+💬 AI Workplace Chatbot
+An interactive AI assistant for workplace-related questions and tasks.
+•	Natural conversational interface
+•	AI-generated responses based on user prompts
+•	Current-session conversation history
+•	Simple and responsive chat experience
+🎨 Design
+The application uses a modern SaaS dashboard design featuring:
+•	Light grey and dark colour palette
+•	Clean typography
+•	Responsive layout
+•	Sidebar navigation
+•	Dashboard cards
+•	Editable AI outputs
+•	Loading and error states
+•	Professional spacing and visual hierarchy
+🧠 AI
+The application is designed around structured AI prompts so responses are generated according to the user's actual input rather than relying on generic or hardcoded responses.
+AI functionality can be connected to a compatible AI API.
+Note: This project is designed as a frontend-only application. It does not use a backend, database or authentication system.
+⚙️ Main Sections
+AI Workplace Productivity Assistant
+│
+├── Dashboard
+│
+├── Smart Email Generator
+│   ├── Context
+│   ├── Key Points
+│   ├── Tone
+│   └── Generated Email
+│
+├── AI Research Assistant
+│   ├── Topic / Article
+│   ├── Summary
+│   ├── Key Insights
+│   └── Recommendations
+│
+└── AI Workplace Chatbot
+    ├── User Prompt
+    ├── AI Response
+    └── Conversation History
+🔐 Responsible AI
+The application includes a Responsible AI disclaimer reminding users to review AI-generated information before using it in professional settings.
+AI-generated content may contain errors or inaccuracies and should be verified when accuracy is important.
+📱 Responsive Design
+The application is designed to work across:
+•	Desktop
+•	Laptop
+•	Tablet
+•	Mobile devices
+🛠️ Technology
+The project is intended as a frontend-only web application.
+Potential technologies include:
+•	React
+•	TypeScript
+•	HTML/CSS
+•	Modern UI components
+•	AI API integration
+🚧 Project Status
+In Development
+The core application focuses on three workplace productivity tools:
+1.	Smart Email Generator
+2.	AI Research Assistant
+3.	AI Workplace Chatbot
+Future improvements may include additional workplace automation tools, saved conversations, document processing and integrations.
+📄 License
+This project is available for educational and development purposes.
+This version is intentionally clean and not overly technical, so it works well as a portfolio/GitHub README for the project.
 
-Build a modern responsive web app called AI Workplace Productivity Assistant.
-
-Create a clean SaaS-style dashboard using light grey, white and dark charcoal colours.
-
-Features
-
-Smart Email Generator
-
-User enters recipient/context, subject and key points.
-
-Tone selector: Formal, Friendly, Persuasive.
-
-Generate a professional AI email.
-
-Output must be editable and copyable.
-
-AI Research Assistant
-
-User enters a topic, question or pasted article/text.
-
-Generate an AI summary, key insights and practical recommendations.
-
-Output must be editable and copyable.
-
-AI Workplace Chatbot
-
-Chat interface where users ask workplace-related questions.
-
-Provide useful, contextual AI-generated responses rather than fixed/generic responses.
-
-Include conversation history within the current session.
-
-UI
-
-Left sidebar navigation: Dashboard, Email Generator, Research Assistant, AI Chatbot.
-
-Modern dashboard with feature cards and clear navigation.
-
-Responsive on desktop, tablet and mobile.
-
-Professional typography, spacing and subtle animations.
-
-Include loading states, empty states and error messages.
-
-Add a small Responsible AI disclaimer.
-
-Technical constraints
-
-Frontend only — no backend, database or authentication.
-
-Use client-side AI integration only.
-
-Keep the architecture simple and suitable for a free Lovable project.
-
-Do not add unnecessary features or pages.
-
-Make the AI responses genuinely generated from the user's input, not hardcoded demo responses.
-
-Use structured prompts internally for the email, research and chatbot features.
-
-Keep API keys/secrets out of frontend code. If a real AI API cannot be securely used in this frontend-only version, create the UI and AI integration structure so an API can be connected later without adding a backend.
-
-Build the complete responsive interface and make all three features functional within these constraints.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/e985fe56-e5d2-4268-9a26-970bfd1db219).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```

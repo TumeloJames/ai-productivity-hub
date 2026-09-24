@@ -50,7 +50,7 @@ function Dashboard() {
     <AppShell title="Dashboard" description="Three AI tools for everyday work">
       <div className="mx-auto max-w-5xl space-y-8">
         <section className="animate-rise card-surface overflow-hidden p-6 md:p-8">
-          <span className="inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1 text-xs font-medium text-accent-foreground">
+          <span className="inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1 text-xs font-medium text-primary">
             <ShieldCheck className="size-3.5" /> AI-assisted, human-reviewed
           </span>
           <h2 className="mt-4 text-2xl font-semibold md:text-3xl">
@@ -69,12 +69,12 @@ function Dashboard() {
               className="card-surface animate-rise group flex flex-col p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
               style={{ animationDelay: `${60 * (i + 1)}ms` }}
             >
-              <span className="flex size-10 items-center justify-center rounded-lg bg-secondary text-secondary-foreground">
+              <span className="flex size-10 items-center justify-center rounded-xl bg-accent text-primary">
                 <Icon className="size-5" />
               </span>
               <h3 className="mt-4 text-base font-semibold">{title}</h3>
               <p className="mt-1.5 flex-1 text-sm text-muted-foreground">{body}</p>
-              <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium">
+              <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
                 Open
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </span>

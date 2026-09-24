@@ -135,7 +135,7 @@ function EmailPage() {
           loadingLabel="Drafting your email…"
           emptyState={
             <div className="max-w-xs text-muted-foreground">
-              <Mail className="mx-auto size-8 opacity-40" />
+              <Mail className="mx-auto size-8 text-primary opacity-70" />
               <p className="mt-3 text-sm">
                 Your generated email will appear here, fully editable before you copy it.
               </p>

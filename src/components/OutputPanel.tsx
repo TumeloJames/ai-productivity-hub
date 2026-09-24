@@ -45,7 +45,7 @@ export function OutputPanel({
 
       {loading ? (
         <div className="flex flex-1 flex-col items-center justify-center gap-3 text-muted-foreground">
-          <Loader2 className="size-5 animate-spin" />
+          <Loader2 className="size-5 animate-spin text-primary" />
           <p className="text-sm">{loadingLabel}</p>
           <div className="mt-2 w-full max-w-sm space-y-2">
             {[0, 1, 2].map((i) => (

@@ -107,7 +107,7 @@ function ChatPage() {
                   title="Ask a workplace question"
                   description="Your conversation stays in this session only."
                 >
-                  <MessagesSquare className="size-8 text-muted-foreground opacity-40" />
+                  <MessagesSquare className="size-8 text-primary opacity-70" />
                   <div className="space-y-1">
                     <h3 className="text-sm font-medium">Ask a workplace question</h3>
                     <p className="text-sm text-muted-foreground">
@@ -119,7 +119,7 @@ function ChatPage() {
                       <button
                         key={s}
                         onClick={() => send(s)}
-                        className="rounded-full border border-border px-3 py-1.5 text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                        className="rounded-full border border-border px-3 py-1.5 text-xs text-muted-foreground transition-colors hover:border-primary/30 hover:bg-accent hover:text-primary"
                       >
                         {s}
                       </button>

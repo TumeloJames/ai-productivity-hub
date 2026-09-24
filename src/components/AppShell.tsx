@@ -33,10 +33,10 @@ function NavLinks({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
             to={to}
             onClick={onNavigate}
             className={cn(
-              "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200",
+              "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-200",
               active
                 ? "bg-primary text-primary-foreground shadow-sm"
-                : "text-muted-foreground hover:bg-accent hover:text-foreground",
+                : "text-muted-foreground hover:bg-accent hover:text-primary",
             )}
           >
             <Icon className="size-4" />
@@ -52,7 +52,7 @@ function SidebarInner({ onNavigate }: { onNavigate?: (() => void) | undefined })
   return (
     <div className="flex h-full flex-col gap-6 p-5">
       <Link to="/" onClick={onNavigate} className="flex items-center gap-3">
-        <span className="flex size-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+        <span className="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
           <Bot className="size-5" />
         </span>
         <span className="text-sm leading-tight font-semibold">

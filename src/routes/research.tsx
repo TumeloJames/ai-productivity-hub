@@ -86,7 +86,7 @@ function ResearchPage() {
           loadingLabel="Reading and analysing…"
           emptyState={
             <div className="max-w-xs text-muted-foreground">
-              <BookOpen className="mx-auto size-8 opacity-40" />
+              <BookOpen className="mx-auto size-8 text-primary opacity-70" />
               <p className="mt-3 text-sm">
                 You'll get a summary, key insights and practical recommendations here.
               </p>

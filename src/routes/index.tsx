@@ -53,9 +53,10 @@ function Dashboard() {
           <span className="inline-flex items-center gap-2 rounded-full bg-accent px-3 py-1 text-xs font-medium text-primary">
             <ShieldCheck className="size-3.5" /> AI-assisted, human-reviewed
           </span>
-          <h2 className="mt-4 text-2xl font-semibold md:text-3xl">
+          <h2 className="mt-4 text-base font-medium text-primary md:text-lg">Welcome back 👋</h2>
+          <p className="mt-2 text-lg md:text-xl">
             Get the writing, reading and thinking done faster.
-          </h2>
+          </p>
           <p className="mt-2 max-w-2xl text-sm text-muted-foreground md:text-base">
             Every result is generated live from what you type — edit it, copy it and make it yours.
           </p>

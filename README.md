@@ -1,142 +1,310 @@
 # AI Workplace Productivity Assistant
 
-A modern, responsive SaaS-style web application designed to help professionals automate common workplace tasks using AI.
+A modern, responsive SaaS-style web application designed to help professionals complete everyday workplace tasks faster using AI.
 
-## Overview
+The **AI Workplace Productivity Assistant** provides AI-powered tools for email writing, research assistance and workplace conversations, combined with a clean productivity dashboard and local activity analytics.
 
-**AI Workplace Productivity Assistant** provides a simple workspace for generating professional emails, researching topics and interacting with an AI workplace assistant.
+## 🚀 Features
 
-The application focuses on a clean, professional user experience with a light grey and dark colour scheme.
+### ✉️ Smart Email Generator
 
-## Features
+Generate professional emails based on the user's actual input.
 
-### Smart Email Generator
+**Features:**
+- Recipient/context input
+- Email subject input
+- Key points input
+- Tone selection:
+  - Formal
+  - Friendly
+  - Persuasive
+- AI-generated content based on the user's provided information
+- Editable generated emails
+- Copy-to-clipboard functionality
+- Loading and error states
 
-Generate professional workplace emails based on user-provided information.
+The application does not rely on generic or hardcoded email responses.
 
-* Formal, Friendly and Persuasive tones
-* Structured AI prompts
-* Editable generated emails
-* Copy generated content
-* User-specific AI responses
+---
 
-### AI Research Assistant
+### 🔎 AI Research Assistant
 
-Use AI to quickly understand topics and articles.
+Analyse topics, questions or provided text using AI.
 
-* Enter a topic, question or article
-* Generate summaries
-* Extract key insights
-* Receive practical recommendations
-* Edit and copy generated results
+**Features:**
+- Enter a research topic or question
+- Paste an article or other text
+- Generate an AI-powered summary
+- Generate key insights
+- Provide practical recommendations
+- Editable AI results
+- Copy-to-clipboard functionality
+- Loading and error states
 
-### AI Workplace Chatbot
+Research outputs are generated from the user's actual input rather than predefined responses.
+
+---
+
+### 💬 AI Workplace Chatbot
 
 An interactive AI assistant for workplace-related questions and tasks.
 
-* Natural conversational interface
-* AI-generated responses based on user prompts
-* Current-session conversation history
-* Simple and responsive chat experience
+**Features:**
+- Interactive chat interface
+- User and AI message separation
+- Contextual AI-generated responses
+- Conversation history during the current browser session
+- Clear and responsive chat layout
+- Loading and error states
 
-## Design
+The chatbot responds to the user's actual prompts rather than using hardcoded demo responses.
 
-The application uses a modern SaaS dashboard design featuring:
+---
 
-* Light grey and dark colour palette
-* Clean typography
-* Responsive layout
-* Sidebar navigation
-* Dashboard cards
-* Editable AI outputs
-* Loading and error states
-* Professional spacing and visual hierarchy
+## 📊 Productivity Dashboard
 
-## AI
+The dashboard provides an overview of activity within the current browser/application.
 
-The application is designed around **structured AI prompts** so responses are generated according to the user's actual input rather than relying on generic or hardcoded responses.
+### Dashboard Components
 
-AI functionality can be connected to a compatible AI API.
+- Welcome heading
+- Productivity tagline
+- KPI cards
+- Productivity Activity chart
+- AI Tool Usage chart
+- Recent Activity list
 
-> **Note:** This project is designed as a frontend-only application. It does not use a backend, database or authentication system.
+### Welcome Section
 
-## Main Sections
+The dashboard includes a prominent welcome heading above the existing tagline:
 
-```text
-AI Workplace Productivity Assistant
-│
-├── Dashboard
-│
-├── Smart Email Generator
-│   ├── Context
-│   ├── Key Points
-│   ├── Tone
-│   └── Generated Email
-│
-├── AI Research Assistant
-│   ├── Topic / Article
-│   ├── Summary
-│   ├── Key Insights
-│   └── Recommendations
-│
-└── AI Workplace Chatbot
-    ├── User Prompt
-    ├── AI Response
-    └── Conversation History
-```
+> Get the writing, reading and thinking done faster.
 
-## Responsible AI
+The welcome heading is:
+- Black
+- Slightly larger
+- Prominent
 
-The application includes a Responsible AI disclaimer reminding users to review AI-generated information before using it in professional settings.
+The tagline is:
+- Smaller
+- Regular weight
+- Non-bold
 
-AI-generated content may contain errors or inaccuracies and should be verified when accuracy is important.
+### KPI Metrics
 
-## Responsive Design
+The dashboard tracks:
 
-The application is designed to work across:
+- **AI Tasks Completed**
+- **Emails Generated**
+- **Research Tasks**
+- **Chat Interactions**
 
-* Desktop
-* Laptop
-* Tablet
-* Mobile devices
+Analytics are based on actual user activity within the current browser/application.
 
-## Technology
+The application uses `localStorage` to track activity when users:
 
-The project is intended as a frontend-only web application.
+- Generate emails
+- Complete research tasks
+- Interact with the AI chatbot
 
-Potential technologies include:
+No fake company-wide statistics are displayed.
 
-* React
-* TypeScript
-* HTML/CSS
-* Modern UI components
-* AI API integration
+---
 
-## Project Status
+## 🎨 Design System
 
-**In Development**
+The application follows a minimal, professional SaaS design system.
 
-The core application focuses on three workplace productivity tools:
+| Element | Colour |
+|---|---|
+| Background | `#F7F7F5` |
+| Cards | `#FFFFFF` |
+| Sidebar | `#1C1C1C` |
+| Primary Text | `#242424` |
+| Secondary Text | `#737373` |
+| Borders | `#E7E7E3` |
+| Primary Accent | `#8FAF9A` |
+| Accent Background | `#EAF1EC` |
+| Hover | `#F0F0ED` |
 
-1. Smart Email Generator
-2. AI Research Assistant
-3. AI Workplace Chatbot
+### Design Principles
 
-Future improvements may include additional workplace automation tools, saved conversations, document processing and integrations.
+- Clean
+- Minimal
+- Spacious
+- Professional
+- Modern SaaS appearance
+- Strong visual hierarchy
+- Consistent spacing
+- Subtle borders
+- Subtle shadows
+- Responsive layouts
+- Desktop, tablet and mobile support
 
-## License
+Sage green is used sparingly for:
 
-This project is available for educational and development purposes.
+- Active navigation states
+- Charts
+- Highlights
+- Important UI states
 
-## Author
+The application avoids:
 
-**[Tumelo James Mokoena]**
+- Gradients
+- Neon colours
+- Excessive colours
+- Visually cluttered layouts
 
-BCom General candidate specialising in Marketing and Business Management.
+---
 
-This project was designed and developed as a demonstration of AI-powered workplace productivity, frontend development and modern SaaS application design.
+## 🧭 Application Layout
 
-### Connect
+The application uses a left sidebar containing:
 
-- GitHub: https://github.com/TumeloJames
+- Dashboard
+- Smart Email Generator
+- AI Research Assistant
+- AI Chatbot
 
+The dashboard contains:
+
+1. Welcome section
+2. KPI cards
+3. Analytics
+4. Recent activity
+
+The layout is responsive across desktop, tablet and mobile devices.
+
+---
+
+## 🤖 AI Outputs
+
+All AI-generated outputs should:
+
+- Be based on the user's actual input
+- Be editable
+- Be copyable
+- Be clearly separated from input fields
+- Include appropriate loading states
+- Include appropriate error states
+
+The application should preserve working AI functionality and should never replace functional AI features with hardcoded demonstration responses.
+
+---
+
+## 🛡️ Responsible AI
+
+The application includes a small Responsible AI disclaimer informing users that:
+
+> AI-generated content may contain errors and should be reviewed before being used professionally.
+
+Users should review AI-generated emails, summaries, recommendations and other content before relying on them in professional situations.
+
+---
+
+## ⚙️ Technical Requirements
+
+The application is designed as a frontend-only SaaS project.
+
+### Architecture
+
+- Frontend only
+- No backend
+- No database
+- No authentication
+- Browser-based functionality
+- `localStorage` for local analytics and current-session data
+
+### Data & Privacy
+
+The application should not use fake company-wide analytics.
+
+Analytics should represent activity within the user's current browser/application.
+
+Secret API keys must never be exposed in frontend code.
+
+### Stability
+
+The application should:
+
+- Maintain existing working AI functionality
+- Avoid unnecessary features or pages
+- Remain responsive
+- Maintain a stable build
+- Provide appropriate loading and error states
+- Avoid breaking existing functionality
+
+---
+
+## 📱 Responsive Design
+
+The application should provide a consistent experience across:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+The sidebar, dashboard cards, charts, forms, AI outputs and chat interface should adapt appropriately to different screen sizes.
+
+---
+
+## 🎯 Project Goal
+
+The goal of the **AI Workplace Productivity Assistant** is to provide a polished, practical and professional SaaS-style productivity platform that demonstrates how AI can assist with everyday workplace tasks.
+
+The final application should be:
+
+- Functional
+- Responsive
+- Visually polished
+- Easy to use
+- Professional
+- Portfolio-ready
+
+---
+
+## 📌 Current Scope
+
+The project focuses on three core AI productivity tools:
+
+| Tool | Purpose |
+|---|---|
+| Smart Email Generator | Create professional workplace emails |
+| AI Research Assistant | Summarise and analyse information |
+| AI Workplace Chatbot | Assist with workplace questions and tasks |
+
+These tools are supported by a local productivity dashboard that visualises the user's activity.
+
+---
+
+## 🔒 Important Notes
+
+This application is intended as a frontend portfolio/project application.
+
+It does not include:
+
+- Backend infrastructure
+- Database storage
+- User authentication
+- Company-wide analytics
+- Unnecessary additional features
+
+The application should remain focused on AI-powered workplace productivity while maintaining a clean and professional SaaS experience.
+
+---
+
+## 📄 Project Status
+
+**Status:** Final / Portfolio Ready
+
+The project is intended to demonstrate:
+
+- AI integration
+- Frontend development
+- SaaS UI/UX design
+- Responsive web design
+- Local browser storage
+- Productivity analytics
+- AI-assisted workplace workflows
+- Responsible AI principles

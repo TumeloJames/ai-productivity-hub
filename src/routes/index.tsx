@@ -9,7 +9,7 @@ import {
   MessagesSquare,
   Sparkles,
 } from "lucide-react";
-import { useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 import { AppShell } from "@/components/AppShell";
@@ -20,7 +20,6 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import {
-  getServerUsageSnapshot,
   readUsageEvents,
   subscribeToUsage,
   type UsageEvent,
@@ -117,7 +116,13 @@ function formatActivityTime(value: string) {
 }
 
 function Dashboard() {
-  const events = useSyncExternalStore(subscribeToUsage, readUsageEvents, getServerUsageSnapshot);
+  const [events, setEvents] = useState<UsageEvent[]>([]);
+
+  useEffect(() => {
+    const update = () => setEvents(readUsageEvents());
+    update();
+    return subscribeToUsage(update);
+  }, []);
   const counts = {
     email: events.filter((event) => event.tool === "email").length,
     research: events.filter((event) => event.tool === "research").length,

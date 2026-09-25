@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { generateEmail } from "@/lib/ai.functions";
+import { recordUsage } from "@/lib/usage";
 
 export const Route = createFileRoute("/email")({
   head: () => ({
@@ -60,6 +61,7 @@ function EmailPage() {
         data: { recipient: recipient.trim(), subject: subject.trim(), keyPoints, tone },
       });
       setOutput(result.text);
+      recordUsage("email");
     } catch (e) {
       setOutput("");
       setError(e instanceof Error ? e.message : "The email could not be generated. Try again.");

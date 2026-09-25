@@ -20,6 +20,7 @@ import {
 } from "@/components/ai-elements/prompt-input";
 import { Shimmer } from "@/components/ai-elements/shimmer";
 import { Button } from "@/components/ui/button";
+import { recordUsage } from "@/lib/usage";
 
 export const Route = createFileRoute("/chat")({
   head: () => ({
@@ -76,6 +77,7 @@ function ChatPage() {
     if (!trimmed || busy) return;
     setError(null);
     setInput("");
+    recordUsage("chat");
     void sendMessage({ text: trimmed });
   };
 

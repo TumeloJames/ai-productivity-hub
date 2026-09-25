@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { generateResearch } from "@/lib/ai.functions";
+import { recordUsage } from "@/lib/usage";
 
 export const Route = createFileRoute("/research")({
   head: () => ({
@@ -44,6 +45,7 @@ function ResearchPage() {
     try {
       const result = await run({ data: { topic } });
       setOutput(result.text);
+      recordUsage("research");
     } catch (e) {
       setOutput("");
       setError(e instanceof Error ? e.message : "The analysis could not be generated. Try again.");
